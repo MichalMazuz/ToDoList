@@ -482,3 +482,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+# React / Node.js
+ToDoListReact/node_modules/
+ToDoListReact/build/
+ToDoListReact/.env
+
