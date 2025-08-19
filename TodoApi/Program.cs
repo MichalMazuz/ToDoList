@@ -25,12 +25,12 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
 
-}
+// }
 //app cors
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -71,6 +71,6 @@ app.MapDelete("/item/{id}",async (ToDoDbContext db, int id) =>
     return Results.NoContent();
 });
 
-
+app.MapGet("/",()=> "AuthServer API is running");
 
 app.Run();
