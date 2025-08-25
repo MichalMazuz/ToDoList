@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen();
 //services cors
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
-    builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+    builder.WithOrigins("https://todolistreact-a9ig.onrender.com").AllowAnyMethod().AllowAnyHeader();
 }));
 
 var app = builder.Build();
