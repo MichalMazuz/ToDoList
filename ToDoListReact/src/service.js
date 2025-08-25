@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = process.env.REACT_API_KEY
-
+//axios.defaults.baseURL = process.env.REACT_API_KEY
+axios.defaults.baseURL='https://todolist-1-9sc7.onrender.com';
 axios.interceptors.response.use(
   response => response,
   error => {
@@ -12,6 +12,7 @@ axios.interceptors.response.use(
 
 export default {
   getTasks: async () => {
+    console.log("before",axios.defaults.baseURL);
     const result = await axios.get(`/items`)
     return result.data;
   },
